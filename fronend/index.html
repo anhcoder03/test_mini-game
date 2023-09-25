@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Mini game</h1>
     <form action="">
-        <div>
-            <label for="username">Tên của bạn</label>
-            <input type="text" name="username" id="username" placeholder="Nhập tên của bạn">
-        </div>
-        <div>
-            <span>Thời gian chọn đáp án còn: </span>
-            <span id="time-remaining"></span>
-        </div>
-        <p id="questionText"></p>
-        <div>
-            <label for="answer">Chọn đáp án</label>
-            <select id="selectedAnswer">
-            </select>
-        </div>
-        <div>
-            <label for="prediction">Số người dự đoán đúng:</label>
-            <input type="number" id="prediction" required placeholder="Nhập dự đoán số người đúng">
-        </div>
-        <button type="submit" class="button">Trả lời</button>
+      <div>
+        <label for="username">Tên của bạn</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Nhập tên của bạn"
+        />
+      </div>
+      <div>
+        <span>Thời gian chọn đáp án còn: </span>
+        <span id="time-remaining"></span>
+      </div>
+      <p id="questionText"></p>
+      <div>
+        <label for="answer">Chọn đáp án</label>
+        <select id="selectedAnswer"></select>
+      </div>
+      <div>
+        <label for="prediction">Số người dự đoán đúng:</label>
+        <input
+          type="number"
+          id="prediction"
+          required
+          placeholder="Nhập dự đoán số người đúng"
+        />
+      </div>
+      <button type="submit" class="button">Trả lời</button>
     </form>
-    <h2>Người trả lời đúng, dự đoán số người đúng và nhanh nhất</h2>
-    <div id="userCorrectFastest"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./app.js" ></script>
-</body>
+    <h2>Người trả lời đúng qua các phiên</h2>
+    <div id="listA"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+      integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
 </html>
